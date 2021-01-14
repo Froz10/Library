@@ -1,7 +1,7 @@
 class Order
-  attr_reader :book, :reader, :data
+  attr_reader :book, :reader, :date
 
-  def initialize(book, reader, date = Date.today)
+  def initialize(book, reader, date)
     @book = book
     @reader = reader
     @date = date

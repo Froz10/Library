@@ -1,6 +1,9 @@
 require 'date'
 require 'faker'
 require 'yaml'
+require 'pry'
+
+require_relative './modules/uploader'
 
 require_relative './entities/author'
 require_relative './entities/book'

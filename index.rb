@@ -8,12 +8,19 @@ reader = Reader.new(Faker::Name.name,
                     Faker::Address.city,
                     Faker::Address.street_name,
                     Faker::Number.number(digits: 2))
+order = Order.new(book, reader,
+                    Faker::Time.forward(days: 23, period: :morning))
 
 
-p library
-p author
-p book
-p reader
+library.add(author)
+library.add(book)
+library.add(reader)
+library.add(order)
+
+
+library.save
+
+
 
 
 
