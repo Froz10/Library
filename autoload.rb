@@ -4,6 +4,8 @@ require 'yaml'
 require 'pry'
 
 require_relative './modules/uploader'
+require_relative './modules/errors'
+require_relative './modules/validator'
 
 require_relative './entities/author'
 require_relative './entities/book'

@@ -7,7 +7,7 @@ module Uploader
 
   def load_db
     begin
-      list = [Author, Book, Reader, Order, Date, Time]
+      list = [Author, Book, Reader, Order, Time]
       YAML.safe_load(File.read(FILE_PATH), list, [], [], true).to_a.flatten
     rescue 
       File.new(FILE_PATH, 'w')
