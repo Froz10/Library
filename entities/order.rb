@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Order
-  attr_reader :book, :reader, :date
-
   include Validator
+
+  attr_reader :book, :reader, :date
 
   def initialize(book, reader, date)
     validate(book, reader, date)

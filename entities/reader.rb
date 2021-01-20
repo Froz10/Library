@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Reader
-  attr_reader :name, :email, :city, :street, :house
-
   include Validator
+
+  attr_reader :name, :email, :city, :street, :house
 
   def initialize(name, email, city, street, house)
     validate(name, email, city, street, house)
