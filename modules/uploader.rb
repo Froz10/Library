@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Uploader
   FILE_PATH = './db/data.yml'
 
@@ -6,13 +8,12 @@ module Uploader
   end
 
   def load_db
+    list = [Author, Book, Reader, Order, Time]
     begin
-      list = [Author, Book, Reader, Order, Time]
       YAML.safe_load(File.read(FILE_PATH), list, [], [], true).to_a.flatten
-    rescue 
+    rescue StandardError
       File.new(FILE_PATH, 'w')
       retry
     end
   end
-
 end

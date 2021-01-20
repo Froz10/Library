@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Reader
   attr_reader :name, :email, :city, :street, :house
+
   include Validator
 
   def initialize(name, email, city, street, house)
@@ -18,6 +21,6 @@ class Reader
       check_class(personal_data, String)
       check_for_emptiness(personal_data)
     end
-    check_class(house, Integer)  
+    check_class(house, Integer)
   end
 end

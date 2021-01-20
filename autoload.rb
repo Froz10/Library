@@ -1,4 +1,5 @@
-require 'date'
+# frozen_string_literal: true
+
 require 'faker'
 require 'yaml'
 require 'pry'
