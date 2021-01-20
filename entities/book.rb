@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Book
   attr_reader :title, :author
+
   include Validator
 
   def initialize(title, author)
@@ -12,7 +15,7 @@ class Book
 
   def validate(title, author)
     check_for_emptiness(title)
-    check_class(title, String) 
-    check_class(author, Author)   
+    check_class(title, String)
+    check_class(author, Author)
   end
 end

@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Order
   attr_reader :book, :reader, :date
+
   include Validator
 
   def initialize(book, reader, date)
@@ -12,8 +15,8 @@ class Order
   private
 
   def validate(book, reader, date)
-    check_class(book, Book) 
+    check_class(book, Book)
     check_class(reader, Reader)
-    check_class(date, Time)   
+    check_class(date, Time)
   end
 end
