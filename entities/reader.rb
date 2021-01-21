@@ -22,5 +22,6 @@ class Reader
       check_for_emptiness(personal_data)
     end
     check_class(house, Integer)
+    check_positive(house)
   end
 end
