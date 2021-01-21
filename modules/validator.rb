@@ -10,4 +10,8 @@ module Validator
   def check_class(entity, obj)
     raise WrongClassError unless entity.is_a? obj
   end
+
+  def check_positive(obj)
+    raise NumberHouseError unless obj.positive?
+  end
 end
