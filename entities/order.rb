@@ -5,7 +5,7 @@ class Order
 
   attr_reader :book, :reader, :date
 
-  def initialize(book, reader, date)
+  def initialize(book, reader, date = DateTime.now)
     validate(book, reader, date)
     @book = book
     @reader = reader
