@@ -12,4 +12,10 @@ module Errors
       super('Data should not be empty!')
     end
   end
+  
+  class NumberHouseError < StandardError
+    def initialize
+      super('Number of house should be positive!')
+    end
+  end
 end
