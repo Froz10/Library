@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 class Statistics
-
-  attr_reader :top_readers, :top_books, :number_of_readers_of_top_books
-
   def initialize(orders)
     @orders = orders
     @top_readers = top_readers
@@ -21,7 +18,7 @@ class Statistics
 
   def number_of_readers_of_top_books(quantity = 3)
     @orders.group_by(&:book)
-          .sort_by { |_book, order| -order.size }
-          .first(quantity).to_h.values.flatten.uniq(&:reader).size
+           .sort_by { |_book, order| -order.size }
+           .first(quantity).to_h.values.flatten.uniq(&:reader).size
   end
 end
