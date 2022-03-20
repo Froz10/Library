@@ -8,9 +8,9 @@ module Uploader
   end
 
   def load_db
-    list = [Author, Book, Reader, Order, Time]
+    list = [Author, Book, Reader, Order, Statistics]
     begin
-      YAML.safe_load(File.read(FILE_PATH), list, [], [], true).to_a.flatten
+      YAML.safe_load(File.read(FILE_PATH), list).to_a.flatten
     rescue StandardError
       File.new(FILE_PATH, 'w')
       retry

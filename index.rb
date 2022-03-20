@@ -17,8 +17,11 @@ library.add(book)
 library.add(reader)
 library.add(order)
 
-library.save
+statistics = Statistics.new(library.orders)
+statistics.top_readers
+statistics.top_books
+statistics.number_of_readers_of_top_books
 
-p library.top_readers
-p library.top_books
-p library.number_of_readers_of_top_books
+library.add(statistics)
+
+library.save
